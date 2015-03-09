@@ -1,0 +1,43 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	@include pie-clearfix;
+
+	li {
+		display: block;
+		float: left;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			background-color: transparent;
+			color: #fff;
+			display: block;
+			font: 100 18px/18px $font-secondary;
+			min-width: 137px;
+			padding: 12px 30px;
+			text-align: center;
+			@include transition(all 0.3s ease);
+
+			&:hover {
+				background-color: darken($primary-green, 10%);
+				text-decoration: none;
+			}
+		}
+
+		&.active {
+			a {
+				background-color: tint($hyla-dark-blue, 15%);
+				color: tint($primary-blue, 70%);
+				pointer-events: none;
+			}
+		}
+	}
+}

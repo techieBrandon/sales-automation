@@ -1,0 +1,59 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+table.details {
+	border: 1px solid tint($hyla-gray, 60%);
+	margin: 15px 0 0 0;
+	width: 100%;
+
+	> thead {
+		> tr {
+			> th {
+				color: $hyla-gray;
+				font: 300 13px/16px $font-tertiary;
+				padding: 10px 15px 5px 15px;
+				text-align: left;
+				word-wrap: break-word;
+
+				&:last-child { border-left: 1px dotted tint($hyla-gray, 70%); }
+			}
+		}
+	}
+
+	> tbody {
+		> tr {
+			> td {
+				border-bottom: 1px solid tint($hyla-gray, 40%);
+				color: $hyla-dark-blue;
+				font: 100 14px/18px $font-secondary;
+				margin: 0;
+				max-width: 40%;
+				padding: 0 20px 10px 30px;
+				vertical-align: text-top;
+				word-wrap: break-word;
+
+				&:last-child { border-left: 1px dotted tint($hyla-gray, 70%); }
+				&.wide { width: 40%; }
+
+				small {
+					color: tint($hyla-gray, 20%);
+					display: block;
+					font-size: 12px;
+					padding: 10px 0 0 0;
+
+					&:first-child { padding-top: 0; }
+					&.text-bright-blue { }
+				}
+				strong {
+					font-size: 22px;
+					font-weight: 100;
+					line-height: 28px;
+				}
+				nav.dropdown { margin-top: 15px; }
+			}
+		}
+	}
+}

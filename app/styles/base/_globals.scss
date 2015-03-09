@@ -1,0 +1,68 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "sprites/*.png";
+@include all-sprites-sprites(true);
+
+/*
+	COLORS
+*/
+
+/** Brand **/
+$primary-green:   #62a70f;
+$primary-blue:    #003366;
+
+$bright-blue:     #249dd6;
+$hyla-dark-blue:  #070c20;
+$medium-blue:     rgb(0, 89, 178);
+
+$hyla-gray:       #5a7881;
+
+$medium-green:    #008345;
+$dark-green:      #004f34;
+$acid-green:      #c3d600;
+
+$secondary-green: #008345;
+
+$alert-orange:    #db5c0d;
+
+$body-color:      tint($hyla-dark-blue, 30%);
+
+
+/*
+	FONTS
+*/
+
+$font-primary:   'adelle', 'Arial', sans-serif;
+$font-secondary: 'adelle-sans', 'Arial', sans-serif;
+$font-tertiary:  'din-condensed-web', sans-serif;
+
+/*
+	GRADIENTS
+*/
+
+.gradient-blue {
+	@include filter-gradient( $hyla-dark-blue, $primary-blue );
+	@include background-image(linear-gradient($hyla-dark-blue 0%, $primary-blue 100%));
+}
+
+.gradient-dark-blue {
+	@include filter-gradient( tint($hyla-dark-blue, 10%), tint($hyla-dark-blue, 5%) );
+	@include background-image(linear-gradient(tint($hyla-dark-blue, 10%) 0%, tint($hyla-dark-blue, 5%) 100%));
+}
+
+.gradient-light-blue {
+	@include filter-gradient( tint($primary-blue, 20%), $primary-blue );
+	@include background-image(linear-gradient(tint($primary-blue, 20%) 0%, $primary-blue 100%));
+}
+
+// Horizontal
+.gradient-horizontal-blue {
+	@include filter-gradient( $hyla-dark-blue, $primary-blue, horizontal );
+	@include background-image(linear-gradient(left, $primary-blue 0%, tint($primary-blue, 20%) 100%));
+}

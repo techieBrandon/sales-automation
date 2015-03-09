@@ -1,0 +1,36 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.pagination {
+
+	.results {
+		color: $hyla-dark-blue;
+		float: left;
+		font: 300 14px/14px $font-secondary;
+		margin: 12px 0 0 0;
+	}
+
+	.control {
+		background-color: #fff;
+		@include border-radius(1px);
+		color: $primary-green;
+		display: inline;
+		float: left;
+		font-size: 20px;
+		height: 30px;
+		line-height: 30px;
+		margin: 0 0 0 10px;
+		text-align: center;
+		@include transition(all 0.3s ease);
+		width: 30px;
+
+		&:hover {
+			background-color: tint($hyla-gray, 40%);
+			color: $hyla-gray;
+			cursor: pointer;
+		}
+	}
+}

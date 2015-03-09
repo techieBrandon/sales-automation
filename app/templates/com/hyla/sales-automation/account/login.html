@@ -1,0 +1,38 @@
+  <div id="page" class="feature">
+    <section class="panel login">
+      <div class="container">
+        <header>
+          <img src="assets/images/hyla-logo-simple.png" title="eRecycling Corps" alt="eRcycling Corps" />
+          <p>Welcome back to the Customer Portal</p>
+        </header>
+
+        <form class="validate no-submit">
+          <!--#include virtual="includes/components/alert/email-reset.html" -->
+
+          <div class="input-box ">
+            <span class="icon icon-user"></span>
+            <input type="email" name="email" placeholder="email@emailaddress.com" class="required" />
+          </div> <!-- input-box -->
+
+          <div class="input-box">
+            <span class="icon icon-password"></span>
+            <input type="password" name="password" placeholder="Password" class="required" />
+          </div> <!-- input-box -->
+
+          <button type="submit" class="primary green">Sign In</button>
+
+          <div class="bar">
+            <div class="left remember-me">
+              <label class="checkbox text-white"><input type="checkbox" name="remember_me" /> Remember me</label>
+            </div> <!-- left -->
+
+            <div class="right">
+              <a href="#overlay-forgot-password" class="overlay-trigger">I forgot my password <span class="icon-large icon-carrot_right"></span></a>
+            </div> <!-- right -->
+          </div> <!-- bar -->
+        </form>
+
+        <div class="seal"></div>
+      </div> <!-- container -->
+    </section>
+  </div> <!-- page -->

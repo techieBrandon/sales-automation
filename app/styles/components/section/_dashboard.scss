@@ -1,0 +1,64 @@
+.container {
+  &.dashboard {
+    width: 100%;
+    background: rgb(222, 228, 229);
+    position: relative;
+
+    .gradient-bg {
+      @extend .gradient-horizontal-blue;
+      height: 100px;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 4;
+    }
+
+    .white-bg {
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .container {
+
+      &.wide {
+        display: table;
+        z-index: 5;
+
+        .container-left {
+          width: 164px;
+          display: table-cell;
+          overflow: hidden;
+        }
+
+        .container-right {
+          width: 816px;
+          display: table-cell;
+          overflow: hidden;
+
+          .gray-bg {
+            background-color: tint($hyla-gray, 80%);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+
+          .main-content {
+            z-index: 10;
+            padding: 10px 20px 100px 20px;
+            position: relative;
+            height: 100%;
+
+
+          }
+        }
+      }
+    }
+  }
+}

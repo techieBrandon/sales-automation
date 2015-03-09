@@ -1,0 +1,91 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.table {
+	padding-bottom: 20px;
+
+	&.pull-sides { margin-left: -20px; margin-right: -20px; }
+
+	.row {
+		border-bottom: 2px solid tint($hyla-gray, 80%);
+		display: block;
+		padding: 10px 0;
+		@include pie-clearfix;
+		position: relative;
+		width: 100%;
+
+		/** Classes **/
+		&.odd { background-color: tint($hyla-gray, 95%); }
+		&.even { background-color: tint($hyla-gray, 90%); }
+
+		/** Warning **/
+		.warning {
+			color: $alert-orange;
+			font-size: 20px;
+			left: -35px;
+			line-height: 20px;
+			margin-top: -10px;
+			position: absolute;
+			top: 50%;
+		}
+
+		.cell {
+			color: $hyla-dark-blue;
+			float: left;
+			font: 300 13px/18px $font-secondary;
+			padding: 8px 15px;
+			word-wrap: break-word;
+
+			/** Classes **/
+			&.new-line { clear: both; }
+
+			/** Widths **/
+			&.width-5 { width: 5%; }
+			&.width-10 { width: 10%; }
+			&.width-12 { width: 12%; }
+			&.width-15 { width: 15%; }
+			&.width-18 { width: 18%; }
+			&.width-20 { width: 20%; }
+			&.width-22 { width: 22%; }
+			&.width-25 { width: 25%; }
+			&.width-30 { width: 30%; }
+			&.width-35 { width: 35%; }
+			&.width-40 { width: 40%; }
+			&.width-45 { width: 45%; }
+			&.width-50 { width: 50%; }
+			&.width-55 { width: 55%; }
+			&.width-60 { width: 60%; }
+			&.width-65 { width: 65%; }
+			&.width-70 { width: 70%; }
+			&.width-75 { width: 75%; }
+			&.width-80 { width: 80%; }
+			&.width-85 { width: 85%; }
+			&.width-90 { width: 90%; }
+			&.width-95 { width: 95%; }
+			&.width-100 { width: 100%; }
+		}
+	}
+
+	> header {
+		.row {
+			border-bottom: none;
+			.cell {
+				color: tint($hyla-dark-blue, 40%);
+				font-size: 13px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1020px) {
+
+	.table {
+		padding-left: 50px;
+	}
+
+}

@@ -1,0 +1,103 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+section.panel {
+	&.login {
+		background: image-url('login-bg-photo.jpg') no-repeat;
+		background-color: $primary-blue;
+		background-position: center center;
+		@include background-size(cover);
+		height: 100%;
+		width: 100%;
+
+		header {
+			padding-top: 150px;
+			text-align: center;
+
+			p {
+				color: tint($primary-green, 50%);
+				font: 100 24px/32px $font-primary;
+				margin: 10px 0;
+			}
+		}
+
+		form {
+			margin: 70px auto 0;
+			width: 300px;
+
+			button {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+
+			.alert { margin: -40px -100px 40px;	}
+		}
+
+		.seal {
+			background: image-url('hyla-seal.png') no-repeat;
+			bottom: -200px;
+			display: block;
+			height: image-height('hyla-seal.png');
+			position: absolute;
+			right: 80px;
+			width: image-width('hyla-seal.png');
+		}
+	}
+}
+
+@media (max-width: 1020px) {
+
+	section.panel {
+		&.login {
+			.seal { right: 0px; }
+		}
+	}
+
+}
+
+
+@media (max-width: 767px) {
+
+	section.panel {
+		&.login {
+			header {
+				padding-top: 100px;
+
+				img { max-width: 100%; }
+				p {
+					font-size: 15px;
+					line-height: 21px;
+				}
+			}
+			form {
+				margin: 60px auto 0;
+				position: relative;
+				width: 260px;
+
+				.bar {
+					.right {
+						max-width: 100%;
+						text-align: center;
+						width: 100%;
+					}
+				}
+				.remember-me { display: none; }
+				.alert {
+					margin: 0 10px;
+					position: absolute;
+					top: 5px;
+					z-index: 10;
+				}
+			}
+			.seal {
+				background-size: 140px 140px;
+				bottom: -250px;
+				right: 0;
+			}
+		}
+	}
+
+}

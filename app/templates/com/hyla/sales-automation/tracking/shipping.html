@@ -1,0 +1,39 @@
+<div class="bar">
+  <div class="left">
+    <div class="select-dropdown">
+      <div class="selected">
+        <span class="value">Sort</span>
+        <span class="arrow"><span class="icon-carrot_down"></span></span>
+      </div> <!-- selected -->
+
+      <ul class="only-show-single">
+        <li tracking-filter tracking-filter-name="all"></li>
+      </ul>
+      <input type="hidden" name="sort" class="select-value" value="" />
+    </div> <!-- select-dropdown -->
+  </div> <!-- left -->
+
+  <div class="right">
+    <div class="pagination">
+      <span class="results"><strong>{{trackingIndex + 1}}-{{trackingIndex + trackingCount}}</strong> of <strong>{{trackingTotal}}</strong></span>
+      <span class="control previous" ng-click="selectPreviousTrackingPage()"><span class="icon-carrot_left"></span></span>
+      <span class="control next" ng-click="selectNextTrackingPage()"><span class="icon-carrot_right"></span></span>
+    </div> <!-- pagination -->
+  </div> <!-- right -->
+</div> <!-- bar -->
+
+<table class="sorting" ng-controller="TrackingSortController">
+  <tbody>
+    <tr>
+      <td tracking-sort tracking-sort-name="order" ng-class="getActiveSortClassByName('order')"></td>
+      <td tracking-sort tracking-sort-name="shipment" ng-class="getActiveSortClassByName('shipment')"></td>
+      <td tracking-sort tracking-sort-name="shipped on" ng-class="getActiveSortClassByName('shipped_on')"></td>
+      <td tracking-sort tracking-sort-name="last updated" ng-class="getActiveSortClassByName('last udpated')"></td>
+      <td><span>&nbsp;</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="drawers" ng-controller="TrackingDrawerController">
+  <div tracking-drawers tracking-drawers-template="templates/com/hyla/sales-automation/tracking/shipping-drawers.html" class="tracking-list-items"></div>
+</div> <!-- drawers -->

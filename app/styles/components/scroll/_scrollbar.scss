@@ -1,0 +1,44 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.scroll-pane {
+
+	.jspContainer {
+		overflow: hidden;
+		position: relative;
+	}
+
+	.jspPane {
+		position: absolute;
+		width: 350px !important;
+	}
+
+	.jspVerticalBar {
+		background: transparent;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 10px;
+	}
+
+	.jspCap { display: none; }
+
+	.jspTrack {
+		background: transparent;
+		position: relative;
+	}
+
+	.jspDrag {
+		background: image-url('custom-scrollbar-green.png') no-repeat;
+		cursor: pointer;
+		height: 200px !important;
+		left: 0;
+		position: relative;
+		top: 0;
+		width: 10px;
+	}
+}

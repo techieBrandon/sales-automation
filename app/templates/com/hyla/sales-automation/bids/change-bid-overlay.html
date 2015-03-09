@@ -1,0 +1,93 @@
+<section class="changeBidOverlay" ng-controller="ChangeBidOverlayController" ng-init="init()">
+  <header>
+    <button class="close-overlay" type="button" ng-click="closePageOverlay()"></button>
+    <h1>Change Bid on {{selectedBid.items[0]['manufacturer']}} - {{selectedBid.items[0]['model']}} {{selectedBid.items[0]['model_number']}}</h1>
+    <p>{{selectedBid.items[0]['description']}}</p>
+  </header>
+  <section class="bidDetails">
+    <h1>Bid Deadline: {{getDateByDateString(selectedBid['deadline_date'])}}</h1>
+    <h2>Bid Information</h2>
+    <table>
+      <tr>
+        <td><span>Model:</span>{{selectedBid.items[0]['model']}}</td>
+        <td><span>Model Number:</span>{{selectedBid.items[0]['model_number']}}</td>
+      </tr>
+      <tr>
+        <td><span>Grade:</span>{{selectedBid.items[0]['grade']}}</td>
+        <td><span>Manufacturer:</span>{{selectedBid.items[0]['manufacturer']}}</td>
+      </tr>
+      <tr>
+        <td><span>Carrier:</span>{{selectedBid.items[0]['carrier']}}</td>
+        <td><span>Technology:</span>{{selectedBid.items[0]['technology']}}</td>
+      </tr>
+      <tr>
+        <td><span>Warehouse:</span>{{selectedBid.items[0]['warehouse']['name']}}</td>
+        <td><span>SKU#:</span>{{selectedBid.items[0]['sku_number']}}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><span>Packaging:</span>{{selectedBid['packaging_description']}}</td>
+      </tr>
+    </table>
+  </section>
+  <section class="bidQuantity">
+    <div class="left">
+      <table>
+        <tr>
+          <td>Quantity:</td>
+          <td><input ng-model="selectedBid['awarded_quantity']" /></td>
+        </tr>
+        <tr>
+          <td>Price Per Device:</td>
+          <td><input ng-model="selectedBid['price_per_unit']" /></td>
+        </tr>
+        <tr>
+          <td>Extended Total:</td>
+          <td class="bidTotal">${{selectedBid['awarded_quantity'] * selectedBid['price_per_unit']}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="right">
+      <table>
+        <tr>
+          <td><img src="css/images/change_bid_icon.png" /></td>
+          <td>
+            <h3>Need More?</h3>
+            <p>[Description] Quidunditatem ut amen da dolupta ecuptatur sim volorup tae nis rerciis sed amet.</p>
+          </td>
+        </tr>
+        <tr>
+          <td><input ng-model="shouldRepresentativeContactMe" type="checkbox" /></td>
+          <td>I want my sales representative to contact me about additional models.</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="bidShippingInfo">
+    <h2>Shipping Information</h2>
+    <table>
+      <tr>
+        <td>Shipping Account:</td>
+        <td>
+          <div class="select-dropdown">
+            <div class="selected">
+              <span class="value">Sort</span>
+              <span class="arrow"><span class="icon-carrot_down"></span></span>
+            </div> <!-- selected -->
+            <ul class="only-show-single">
+              <li>1</li>
+              <li>2</li>
+            </ul>
+            <input type="hidden" name="sort" class="select-value" value="" />
+          </div> <!-- select-dropdown -->
+        </td>
+      </tr>
+      <tr>
+        <td>Shipping Method:</td>
+        <td></td>
+      </tr>
+    </table>
+    <div>
+      <input ng-model="haveAgreedToTerms" type="checkbox" /> [Legal] I have read and agree to the Master Agreement Terms. [Legal] I understand that the quantity of items may be more or fewer than currently listed. Dolor sit amet, consectetur adipiscing elit. Nunc molestie, orci non sodales gravida, nunc eros fringilla est nec.
+    </div>
+  </section>
+</section>

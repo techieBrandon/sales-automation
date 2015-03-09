@@ -1,0 +1,44 @@
+{
+  "totals": {
+    "types": [{"name": "sir bid", "total": 80}, {"name": "lot bid", "total": 40}],
+    "sir bid": 0,
+    "lot bid": 1
+  },
+  "total": 50,
+  "state": "pending",
+  "filter": "all",
+  "index": 0,
+  "count": 25,
+  "order": "descending",
+  "sort": "carrier",
+  "type": "sir bid",
+  "bids": [
+    {
+      "type": "sir bid",
+      "updated_date": "2012-01-11T20:49:59.415Z",
+      "deadline_date": "2012-01-11T20:49:59.415Z",
+      "reference_number": "CR#007325",
+      "items": [
+        {
+          "grade": "ptc",
+          "product": "Bid on Apple iPhone 3G 16GB",
+          "carrier": "Virgin Mobile",
+          "manufacturer": "Samsung",
+          "model": "Galaxy Note II",
+          "sku_number": "SPHN900GYK",
+          "model_number": "SM-N900A",
+          "technology": "CDMA",
+          "description": "dolor sit amet, consectetur adipiscing elit. Nunc molestie, orci non sodales eu enim. Imus di doluptur.",
+          "warehouse": {
+            "name": "UN05"
+          }
+        }
+      ],
+      "packaging_description": "Packaging description",
+      "additional_info": "Additional Info",
+      "awarded_quantity": 500,
+      "price_per_unit": 20,
+      "sku_number": "SPHN900GYK"
+    }
+  ]
+}

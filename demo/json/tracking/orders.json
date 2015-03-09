@@ -1,0 +1,61 @@
+{
+  "totals": {
+    "types": [{"name": "shipping", "total": 80}, {"name": "processing", "total": 40}, {"name": "paid", "total": 20}],
+    "shipping": 0,
+    "processing": 1,
+    "paid": 2
+  },
+  "total": 140,
+  "filter": "all",
+  "index": 0,
+  "count": 25,
+  "order": "descending",
+  "sort": "last updated",
+  "type": "shipping",
+  "start_date": "2014-06-11T15:40:45.911Z",
+  "end_date": "2014-06-11T17:40:45.911Z",
+  "orders": [
+    {
+      "type": "shipping",
+      "order_number": "00002222244",
+      "shipment_number": "009777",
+      "shipped_on_date": "2012-01-11T20:49:59.415Z",
+      "updated_date": "2012-01-11T20:49:59.415Z",
+      "status": "complete",
+      "carrier_info": {
+        "name": "FedEx",
+        "tracking_number": "14j3440u03jt340jt034"
+      },
+      "customer_order_number": "SIR-1203030",
+      "warehouse_id": "009777"
+    },
+    {
+      "type": "shipping",
+      "order_number": "00002222244",
+      "shipment_number": "009777",
+      "shipped_on_date": "2012-01-11T20:49:59.415Z",
+      "updated_date": "2012-01-11T20:49:59.415Z",
+      "status": "complete",
+      "carrier_info": {
+        "name": "FedEx",
+        "tracking_number": "14j3440u03jt340jt034"
+      },
+      "customer_order_number": "SIR-1203030",
+      "warehouse_id": "009777"
+    },
+    {
+      "type": "shipping",
+      "order_number": "00002222244",
+      "shipment_number": "009777",
+      "shipped_on_date": "2012-01-11T20:49:59.415Z",
+      "updated_date": "2012-01-11T20:49:59.415Z",
+      "status": "complete",
+      "carrier_info": {
+        "name": "FedEx",
+        "tracking_number": "14j3440u03jt340jt034"
+      },
+      "customer_order_number": "SIR-1203030",
+      "warehouse_id": "009777"
+    }
+  ]
+}

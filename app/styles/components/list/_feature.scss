@@ -1,0 +1,55 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+ul.feature {
+	list-style-type: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+
+	> li {
+		margin: 20px 0;
+		&:first-child { margin-top: 0; }
+
+		a {
+			color: $hyla-gray;
+			display: block;
+			font: 100 16px/20px $font-secondary;
+			padding: 3px 32px 3px 5px;
+			position: relative;
+			text-transform: uppercase;
+			@include transition(all 0.3s ease);
+
+			&:hover {
+				background-color: tint($hyla-gray, 90%);
+				text-decoration: none;
+			}
+
+			.number {
+				background-color: tint($hyla-gray, 40%);
+				color: #fff;
+				display: block;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				position: absolute;
+				right: 5px;
+				text-align: center;
+				top: 3px;
+				width: 20px;
+			}
+		}
+
+		/** States **/
+		&.active {
+			a {
+				background-color: tint($hyla-gray, 85%);
+				color: $hyla-dark-blue;
+
+				.number { background-color: $primary-green; }
+			}
+		}
+	}
+}

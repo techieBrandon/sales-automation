@@ -1,0 +1,46 @@
+<div id="page" ng-controller="TrackingPageController" ng-init="init()">
+
+<!-- <div id="pageOverlay" class="overlay" ng-controller="PageOverlayController">
+  <div ng-include="pageOverlayTemplateURL"></div>
+</div> -->
+	<hyla-menu-primary></hyla-menu-primary>
+
+  <nav class="menu secondary">
+    <div class="container short">
+      <!-- <ul bid-states class="buttons"></ul> -->
+    </div> <!-- container -->
+  </nav>
+  <section class="dashboard">
+    <div class="white-bg"></div>
+    <div class="gradient-bg"></div>
+    <div class="container wide tracking-data">
+      <div class="col-group squeeze wide">
+        <div class="col col-1-5">
+          <aside class="primary">
+            <div class="content">
+              <div class="date-picker" ng-controller="DatePickerController" ng-init="init()">
+                <h1>22 shipments</h1>
+                <div class="date-picker-date date-picker-date-1">
+                  <input ng-change="onDatePicked()" date-picker-validator ng-model="filterDate.startDate" value="/" />
+                  <span>to</span>
+                </div>
+                <div class="date-picker-date date-picker-date-2">
+                  <input ng-change="onDatePicked()" date-picker-validator ng-model="filterDate.endDate" value="/" />
+                </div>
+              </div>
+              <div class="tracking-types" ng-controller="TrackingTypeSelectorController">
+                <ul tracking-types class="feature"></ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col col-4-5" ng-controller="TrackingListController">
+          <div tracking-list tracking-list-url="templates/com/hyla/sales-automation/tracking/shipping.html" ng-show="getShowClassByName(trackingTypesCollection.trackingTypes[0].name)"></div>
+          <div tracking-list tracking-list-url="templates/com/hyla/sales-automation/tracking/processing.html" ng-show="getShowClassByName(trackingTypesCollection.trackingTypes[1].name)"></div>
+          <div tracking-list tracking-list-url="templates/com/hyla/sales-automation/tracking/paid.html" ng-show="getShowClassByName(trackingTypesCollection.trackingTypes[2].name)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div> <!-- page -->

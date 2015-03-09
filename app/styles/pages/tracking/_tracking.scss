@@ -1,0 +1,153 @@
+.Tracking {
+
+  $dashboard-gray: rgb(222, 228, 229);
+
+  .ui-datepicker {
+    background-color: $dashboard-gray;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
+
+    .ui-datepicker-next {
+
+      .ui-icon {
+        float: right;
+      }
+    }
+  }
+
+  .dashboard {
+    width: 100%;
+    background: $dashboard-gray;
+    position: relative;
+
+    .white-bg {
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .gradient-bg {
+      @extend .gradient-horizontal-blue;
+      height: 135px;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .tracking-data {
+      z-index: 20;
+      display: table;
+      width: 980px;
+
+      .col-group {
+        width: 100%;
+        display: table-row;
+        height: 100%;
+
+        .col-1-5 {
+          display: table-cell;
+          height: 100%;
+          padding: 0px 0 20px 0px;
+          float: none;
+
+          .date-picker {
+
+            width: 170px;
+            height: 135px;
+            position: relative;
+
+            h1 {
+              text-transform: uppercase;
+              font-size: 0.9em;
+              line-height: 1em;
+              color: rgb(179, 194, 209);
+              font-family: $font-secondary;
+              padding: 0;
+              margin :0;
+              position: absolute;
+              top: 13px;
+              left: 0px;
+              text-align: center;
+              width: 170px;
+            }
+
+            .date-picker-date {
+
+              position: absolute;
+
+              input {
+                width: 68px;
+                height: 38px;
+                text-align: center;
+              }
+
+              img {
+                position: absolute;
+                left: 80px;
+                top: 5px;
+              }
+
+              span {
+                position: absolute;
+                left: 120px;
+                top: 9px;
+                color: rgb(255,255,255);
+              }
+            }
+
+            .date-picker-date-1 {
+              top: 38px;
+              left: 10px;
+            }
+
+            .date-picker-date-2 {
+              top: 86px;
+              left: 10px;
+            }
+
+          }
+
+          .tracking-types {
+            width: 170px;
+            padding: 20px 0 0 0;
+
+            li {
+              padding: 0 20px 0 0;
+            }
+          }
+        }
+
+        .col-4-5 {
+          display: table-cell;
+          vertical-align: top;
+          background: rgb(222, 228, 229);
+          height: 100%;
+          padding: 20px 0 20px 20px;
+          float: none;
+          overflow: hidden;
+
+          table {
+
+            width: 100%;
+          }
+
+          .tracking-list-items {
+
+
+            .tracking-list-item {
+
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}

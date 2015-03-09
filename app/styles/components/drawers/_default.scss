@@ -1,0 +1,116 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.drawers {
+
+	.drawer {
+		background-color: #fff;
+		border-top: 2px solid tint($hyla-gray, 80%);
+		padding: 10px 5px;
+		position: relative;
+		@include transition(all 0.3s ease);
+		z-index: 10;
+
+		table {
+			width: 100%;
+
+			> tbody {
+				> tr {
+					> td {
+						color: tint($hyla-dark-blue, 20%);
+						font: 300 16px/16px $font-secondary;
+						min-width: 85px;
+						position: relative;
+						&.last-child { min-width: 0; }
+
+						small { font-size: 14px; }
+						.label { width: 80px; }
+
+						.drawer-state {
+							display: block;
+							height: 16px;
+							position: relative;
+							width: 16px;
+							z-index: 10;
+
+							span {
+								left: 0;
+								position: absolute;
+								top: 0;
+								@include transform(translate3d(0,0,0));
+								@include transition(all 0.3s ease);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/** States **/
+		&.active, &:hover {
+			@extend .gradient-horizontal-blue;
+			cursor: pointer;
+			table {
+				> tbody {
+					> tr {
+						> td { color: #fff;	}
+					}
+				}
+			}
+		}
+		&.active {
+			table {
+				> tbody {
+					> tr {
+						> td {
+							.drawer-state {
+								span { @include transform(rotate(45deg)); }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.drawer-content {
+		background-color: #fff;
+		@include border-bottom-radius(3px);
+		@include box-shadow(0 5px 10px 0 rgba(0,0,0,.2));
+		display: none;
+		padding: 20px 15px 15px 15px;
+		position: relative;
+		@include transform(translate3d(0,0,0));
+		z-index: 20;
+
+		p {
+			color: $hyla-dark-blue;
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0;
+
+			small {
+				color: tint($hyla-dark-blue, 50%);
+				font-size: 14px;
+			}
+		}
+
+		.title {
+			background: image-url('gradients/blue-diagonal-stripe.png') repeat-x;
+			color: $hyla-dark-blue;
+			display: block;
+			font: 300 20px/20px $font-secondary;
+			height: 40px;
+			margin: 10px 0 0 0;
+			padding: 10px;
+
+			small {
+				font-size: 14px;
+				vertical-align: text-top;
+			}
+		}
+	}
+}

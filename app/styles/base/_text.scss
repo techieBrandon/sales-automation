@@ -1,0 +1,112 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+/*
+	COLORS
+*/
+
+.text-white { color: #fff; }
+.text-black { color: #000; }
+.text-primary-green { color: $primary-green; }
+.text-primary-blue { color: $primary-blue; }
+.text-bright-blue { color: $bright-blue; }
+.text-dark-blue { color: $hyla-dark-blue; }
+.text-dark-blue-tint-15 { color: tint($hyla-dark-blue, 15%); }
+.text-dark-blue-tint-40 { color: tint($hyla-dark-blue, 40%); }
+.text-medium-green { color: $medium-green; }
+.text-dark-green { color: $dark-green; }
+.text-acid-green { color: $acid-green; }
+.text-secondary-green { color: $secondary-green; }
+.text-alert-orange { color: $alert-orange; }
+.text-gray { color: $hyla-gray; }
+
+/*
+	SIZE
+*/
+
+.text-large {
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.text-extra-large {
+	font-size: 21px;
+	line-height: 28px;
+}
+
+/*
+	HEADERS
+*/
+
+h1,h2,h3,h4,h5,h6 {
+	/** Font Family **/
+	&.primary { font-family: $font-primary; }
+	&.secondary { font-family: $font-secondary; }
+	&.tertiary { font-family: $font-tertiary; }
+	/** Font Weight **/
+	&.light { font-weight: 100; }
+	&.heavy { font-weight: 700; }
+	/** Color **/
+	&.white { color: #fff; }
+}
+
+/*
+	PARAGRAPH
+*/
+
+p {
+	/** Font Family **/
+	&.primary { font-family: $font-primary; }
+	&.secondary { font-family: $font-secondary; }
+	&.tertiary { font-family: $font-tertiary; }
+
+	/** Size **/
+	&.small {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	&.large {
+		font-size: 16px;
+		line-height: 21px;
+	}
+	span.large {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	span.x-large {
+		font-size: 22px;
+		line-height: 30px;
+	}
+
+	/** Color **/
+	&.white { color: #fff; }
+}
+
+/*
+	ANCHOR
+*/
+
+a {
+	color: $primary-green;
+	text-decoration: none;
+	&:hover { text-decoration: underline; }
+}
+
+/*
+	STRONG/BOLD
+*/
+
+strong,bold {
+	&.large { font-size: 1.2em; }
+}
+
+/*
+	EXTRAS
+*/
+
+.meta {
+	font: 300 13px/18px $font-secondary;
+}

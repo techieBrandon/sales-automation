@@ -1,0 +1,15 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.label {
+	@include border-radius(2px);
+	color: #fff;
+	display: inline-block;
+	font: 300 12px/12px 'Arial', sans-serif;
+	padding: 4px 10px 3px;
+	text-align: center;
+	text-transform: uppercase;
+}

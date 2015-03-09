@@ -1,0 +1,116 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+/* BODY */
+body {
+	color: $body-color;
+	font: 300 14px/20px $font-secondary;
+	height: 100%;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+	color: $hyla-dark-blue;
+	font-family: $font-secondary;
+	font-weight: 600;
+	margin: 0 0 0.8em 0;
+	&.uppercase { text-transform: uppercase; }
+}
+h1 { font-family: $font-primary; font-size: 38px; font-weight: 300; line-height: 46px; }
+h2 { color: tint($hyla-dark-blue, 30%); font-size: 26px; font-weight: 300; line-height: 38px; }
+h3 { color: tint($hyla-dark-blue, 30%); font-size: 20px; font-weight: 300; line-height: 30px; }
+h4 { font-size: 21px; line-height: 26px; }
+h5 { font-size: 16px; font-weight: 300; line-height: 21px; }
+h6 { font-family: $font-tertiary; font-size: 13px; letter-spacing: 1px; line-height: 16px; text-transform: uppercase; }
+
+h1 small { font-size: 11px; font-weight: normal; vertical-align: middle; }
+h3 small { color: tint($hyla-dark-blue, 20%); font-size: 13px; font-weight: normal; }
+
+/* ANCHORS */
+a {
+	outline: none;
+	text-decoration: none;
+}
+a img { border: 0px; }
+a:link, a:visited { }
+a:hover, a:active { text-decoration: underline; }
+
+/* HORIZONTAL RULE */
+hr {
+	border-color: tint(#000, 80%);
+	border-style: solid;
+	border-width: 1px 0 0;
+	clear: both;
+	height: 0;
+	margin: 10px 0;
+	width: 100%;
+}
+
+/* PARAGRAPHS */
+p {
+	font: 300 14px/21px $font-secondary;
+	margin: 0 0 20px 0;
+}
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+/* LISTS */
+ul,ol {
+	font-family: $font-secondary;
+	list-style: outside square;
+	padding: 0 0 0 20px;
+	margin: 0 0 20px 0;
+	ul,ol {
+		list-style: outside circle;
+		margin-top: 10px;
+	}
+}
+ol, ol ol {
+	list-style: outside decimal;
+}
+dl { margin: 0 0 20px 0; }
+dt { font-weight: bold; }
+dd { margin-left: 1.5em; }
+
+/* FIGURE */
+
+figure {
+	display: block;
+	margin: 0 0 20px 0;
+	padding: 0;
+	position: relative;
+	a { display: block; }
+	img { display: block; }
+	figcaption {
+		display: block;
+		font: 300 11px/15px $font-secondary;
+		margin: 0;
+		padding: 5px 0;
+		text-align: left;
+	}
+}
+
+
+/* QUOTES */
+blockquote {
+	border: 1px solid #eaeaea;
+	border-left: none;
+	border-right: none;
+	font: italic 18px/27px $font-secondary;
+	margin: 0 0 20px 0;
+	padding: 15px 20px 20px;
+	text-align: center;
+}
+cite {}
+q {}
+
+/* TABLES */
+th.wide,
+td.wide { width: 99%; }
+th.narrow,
+td.narrow { width: 1%; }
+td.label { font-weight: bold; }

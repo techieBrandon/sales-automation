@@ -1,0 +1,25 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.social-media-icon {
+	background-color: tint($primary-blue, 40%);
+	@include border-radius(2px);
+	color: $primary-blue;
+	display: block;
+	font-size: 24px;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	@include transition(all 0.3s ease);
+	vertical-align: middle;
+
+	/** States **/
+	&:hover {
+		background-color: tint($primary-blue, 70%);
+		cursor: pointer;
+		text-decoration: none;
+	}
+}

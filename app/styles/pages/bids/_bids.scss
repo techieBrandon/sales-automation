@@ -1,0 +1,355 @@
+.Bids {
+
+  #page {
+    padding-bottom: 0;
+  }
+
+  .drawer {
+      td {
+        width: 6px/10px;
+      }
+  }
+
+  .dashboard {
+    width: 100%;
+    background: rgb(222, 228, 229);
+    position: relative;
+
+    .white-bg {
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .gradient-bg {
+      @extend .gradient-horizontal-blue;
+      height: 100px;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .bid-data {
+      z-index: 20;
+      display: table;
+      width: 980px;
+
+      .col-group {
+        width: 100%;
+        display: table-row;
+        height: 100%;
+
+        .col-1-5 {
+          display: table-cell;
+          height: 100%;
+          padding: 0px 0 20px 0px;
+          float: none;
+        }
+
+        .col-4-5 {
+          display: table-cell;
+          background: rgb(222, 228, 229);
+          height: 100%;
+          padding: 20px 0 20px 20px;
+          float: none;
+          overflow: hidden;
+
+          table {
+
+            width: 100%;
+          }
+
+          .bid-list-items {
+
+
+            .bid-list-item {
+
+              position: relative;
+
+              .drawer-content {
+                background-image: url('/css/images/bid_drawer_background.png');
+                background-repeat: no-repeat;
+                background-position: bottom right;
+
+                .grade_icon {
+                  background-image: url('/css/images/bid_grade_icon.png');
+                  background-repeat: no-repeat;
+                  background-position: top left;
+                  text-transform: uppercase;
+                  padding-left: 25px;
+
+                  small {
+                    text-transform: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $overlay-gray: rgb(239, 242, 242);
+  @mixin overlay-close-button {
+    background: transparent url(/css/images/cancelBidOverlayCloseIcon.png) no-repeat top left;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+  }
+
+  .overlay {
+
+    width: auto;
+
+    .changeBidOverlay {
+      width: 600px;
+
+      header {
+        background-color: $overlay-gray;
+        position: relative;
+        padding: 0;
+
+        button {
+          @include overlay-close-button;
+          top: 20px;
+          left: 564px;
+        }
+
+        h1 {
+          font-size: 1.6em;
+          color: rgb(90,120,129);
+          line-height: 1.4em;
+          text-align: left;
+          margin: 0;
+          padding: 20px 50px 10px 20px;
+        }
+
+        p {
+          padding: 0 20px 20px 20px;
+        }
+      }
+
+      .bidDetails {
+
+        padding: 20px 20px 10px 20px;
+
+        h1 {
+          font-size: 1.4em;
+          color: $hyla-dark-blue;
+          line-height: 1.4em;
+          text-align: left;
+          margin: 0;
+          padding: 0;
+          font-family: $font-secondary;
+        }
+
+        h2 {
+          font-size: 1.2em;
+          color: $hyla-dark-blue;
+          font-family: $font-secondary;
+        }
+
+        table {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          border: none;
+
+          td {
+            text-align: left;
+            vertical-align: top;
+            color: $hyla-dark-blue;
+            font-size: 1em;
+            font-family: $font-secondary;
+            padding: 0 0 5px 0;
+            width: 50%;
+          }
+        }
+
+        span {
+          font-size: 0.9em;
+          color: $hyla-gray;
+          font-family: $font-secondary;
+          margin: 0 8px 0 0;
+        }
+
+        p {
+          font-size: 1em;
+          color: $hyla-dark-blue;
+          font-family: $font-secondary;
+        }
+      }
+
+      .bidQuantity {
+
+        width: 93%;
+        padding: 0;
+        margin: 0 auto 0 auto;
+        background-color: #f6f8f8;
+        border-radius: 5px;
+        min-height: 176px;
+
+        .left {
+          float: left;
+          width: 50%;
+          position: relative;
+          padding: 15px 0 0 15px;
+          min-height: 176px;
+
+            table {
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              border: none;
+
+                td {
+                  padding: 0 0 22px 0;
+                  vertical-align: center;
+                  text-align: left;
+                  color: rgb(90,120,129);
+                  font-size: 0.9em;
+                  font-family: $font-secondary;
+
+                  &.bidTotal {
+                    font-size: 1.6em;
+                    color: $bright-blue;
+                  }
+                }
+            }
+
+            input {
+              width: 120px;
+            }
+        }
+
+        .right {
+          float: right;
+          width: 50%;
+          position: relative;
+          min-height: 176px;
+          padding: 15px 15px 0 0;
+
+            table {
+              padding: 0;
+              margin: 0;
+              border: none;
+
+              td {
+                vertical-align: top;
+                font-size: 1em;
+                color: $hyla-gray;
+
+                img {
+                  margin: 0 5px 0 0;
+                }
+
+                h3 {
+                  padding: 0;
+                  margin: 0;
+                  font-size: 1.2em;
+                  line-height: 1.3em;
+                }
+
+                p {
+                  font-size: 1em;
+                  color: $hyla-gray;
+                }
+              }
+
+            }
+        }
+      }
+
+      .bidShippingInfo {
+          width: 93%;
+          margin: 18px auto 0 auto;
+          padding: 2px 0 2px 0;
+          border-top: 1px solid #f6f8f8;
+
+          h2 {
+            font-size: 1.2em;
+            color: $hyla-dark-blue;
+            font-family: $font-secondary;
+          }
+      }
+
+    }
+
+
+    .cancelBidOverlay {
+      width: 440px;
+      height: 250px;
+
+      .top {
+        width: 440px;
+        height: 170px;
+        background-color: $overlay-gray;
+        position: relative;
+
+        button {
+          @include overlay-close-button;
+          top: 20px;
+          left: 404px;
+        }
+
+        img {
+          position: absolute;
+          top: 20px;
+          left: 194px;
+        }
+
+        h1 {
+          color: rgb(90, 120, 129);
+          font: normal 1.4em $font-secondary;
+          text-align: center;
+          width: 100%;
+          position: absolute;
+          top: 80px;
+          left: 0;
+        }
+
+        p {
+          color: rgb(123, 147, 154);
+          font: normal 1em $font-secondary;
+          padding: 0 20px 0 20px;
+          position: absolute;
+          top: 115px;
+          left: 0;
+        }
+      }
+
+      .bottom {
+        width: 440px;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+
+        .primary {
+          width: 99px;
+          text-transform: uppercase;
+          position: absolute;
+          top: 25px;
+          left: 19px;
+        }
+
+        .outline {
+          width: 99px;
+          text-transform: uppercase;
+          position: absolute;
+          top: 25px;
+          right: 19px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+section.slider {
+	background-color: tint($hyla-gray, 80%);
+	margin-bottom: -40px;
+	overflow: hidden;
+	position: relative;
+
+	> .gradient-bg {
+		@extend .gradient-horizontal-blue;
+		height: 100px;
+		position: absolute;
+		right: 50%;
+		top: 0;
+		width: 100%;
+		z-index: 4;
+	}
+	> .white-bg {
+		background-color: #fff;
+		height: 100%;
+		position: absolute;
+		right: 50%;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+	}
+
+	.container {
+		overflow: hidden;
+
+		> .gray-bg {
+			background-color: tint($hyla-gray, 80%);
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 5;
+		}
+	}
+
+	.slide-container {
+		overflow: hidden;
+		position: relative;
+
+		> .slide {
+			float: left;
+		}
+	}
+	
+
+	aside.primary {
+		float: left;
+		padding-bottom: 100px;
+		position: relative;
+		width: 19.2%;
+		z-index: 10;
+
+		> .content { position: relative; }
+	}
+
+	.main-content {
+		float: left;
+		height: 100%;
+		padding: 10px 20px 100px 20px;
+		position: relative;
+		width: 80.8%;
+		z-index: 10;
+	}
+}

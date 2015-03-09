@@ -1,0 +1,43 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.tooltip-trigger {
+	color: $primary-green;
+
+	&:hover { cursor: pointer; }
+}
+
+.tooltip {
+	background-color: #fff;
+	@include box-shadow(0 0 3px 2px rgba(0,0,0,.1));
+	color: $hyla-gray;
+	display: none;
+	font: 300 12px/16px $font-secondary;
+	margin-left: -160px;
+	padding: 10px;
+	width: 320px;
+
+	&:before {
+		border-color: transparent transparent #fff transparent;
+		border-style: solid;
+		border-width: 0 15px 15px 15px;
+		content: " ";
+		display: block;
+		left: 50%;
+		margin-left: -15px;
+		position: absolute;
+		top: -14px;
+		width: 0;
+	}
+
+	.title {
+		color: darken($hyla-gray, 15%);
+		display: block;
+		font-size: 16px;
+		line-height: 21px;
+		padding-bottom: 15px;
+	}
+}

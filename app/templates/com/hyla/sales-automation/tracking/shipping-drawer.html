@@ -1,0 +1,18 @@
+<table>
+  <tbody>
+    <tr>
+      <td><small>{{order['order_number']}}</small></td>
+      <td><small>{{order['shipment_number']}}</small></td>
+      <td><small>{{getDateByDateString(order['shipped_on_date'])}}</small></td>
+      <td><small>{{getDateByDateString(order['updated_date'])}}</small></td>
+      <td class="last-child"><span class="drawer-state"><span class="text-primary-green icon-drawer_open"></span></span></td>
+
+      <!-- <td><span class="label" ng-class="getItemGradeClass(bid.items[0].grade)">{{bid.items[0].grade}}</span></td>
+      <td>{{bid.items[0].product}}</td>
+      <td><small>{{bid.items[0].carrier}}</small></td>
+      <td><small>{{bid.items[0].warehouse.name}}</small></td>
+      <td><small>{{getDateByDateString(bid.updated_date)}}</small></td>
+      <td class="last-child"><span class="drawer-state"><span class="text-primary-green icon-drawer_open"></span></span></td> -->
+    </tr>
+  </tbody>
+</table>

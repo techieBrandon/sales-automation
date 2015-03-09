@@ -1,0 +1,57 @@
+<div class="bar">
+  <div class="left">
+    <p><small>Deadline:</small> {{getDateByDateString(bid.deadline_date)}}</p>
+  </div> <!-- left -->
+
+  <div class="right">
+    <button class="primary green tight"><span class="icon icon-document"></span> Print</button>
+  </div> <!-- right -->
+</div> <!-- bar -->
+
+<div class="title">
+  <div class="bar">
+    <div class="left"><small>[Bid Reference number]:</small></div>
+    <div class="right">{{bid.reference_number}}</div>
+  </div> <!-- bar -->
+</div> <!-- title -->
+
+<table class="details">
+  <thead>
+    <tr>
+      <th colspan="3">[Item Details]</th>
+      <th>[Bid Details]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="grade_icon"><small>Grade:</small> {{bid.items[0].grade}}</div>
+        <small>Manufacturer: </small> {{bid.items[0].manufacturer}}
+        <small>Model:</small> {{bid.items[0].model}}
+        <small>Model #:</small> {{bid.items[0].model_number}}
+      </td>
+      <td>
+        <small>Technology: </small> {{bid.items[0].technology}}
+        <small>Carrier:</small> {{bid.items[0].carrier}}
+        <small>Warehouse:</small> {{bid.items[0].warehouse.name}}
+      </td>
+      <td class="wide">
+        <small>Packaging: </small> [Description] {{bid.package_description}}
+        <small>Additional Info:</small> [Description] {{bid.additional_info}}
+      </td>
+      <td>
+        <small>Awarded Quantity:</small> <strong>{{bid.awarded_quantity}}</strong>
+        <small>Price Per Unit:</small> <strong>${{bid.price_per_unit}}</strong>
+        <small class="text-bright-blue">Extended Total:</small> <strong class="text-bright-blue">${{bid.awarded_quantity * bid.price_per_unit}}</strong>
+
+        <nav class="dropdown align-right green shadow">
+          <a href="#" class="current">Take Action &nbsp;<span class="sprites-arrow-dropdown iir"></span></a>
+          <ul class="only-show-single">
+            <li><a href="#" ng-click="cancelBidByIndex($index)">Cancel Bid</a></li>
+            <li><a href="#" ng-click="changeBidByIndex($index)">Change Bid</a></li>
+          </ul>
+        </nav>
+      </td>
+    </tr>
+  </tbody>
+</table>

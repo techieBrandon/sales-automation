@@ -1,0 +1,76 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+ul.cards {
+	list-style-type: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+	@include pie-clearfix;
+
+	> li {
+		background-color: #fff;
+		@include border-radius(2px);
+		@include box-shadow(0 0 1px 2px rgba(0,0,0,.05));
+		display: block;
+		float: left;
+		height: 125px;
+		margin: 0 0 0 2%;
+		padding: 20px;
+		text-align: center;
+		width: 23.5%;
+		&:first-child { margin-left: 0; }
+
+		.title {
+			color: $hyla-gray;
+			display: block;
+			font: 100 13px/16px $font-secondary;
+			height: 28px;
+			letter-spacing: 1px; 
+			text-transform: uppercase;
+		}
+		.amount {
+			display: block;
+			font: 300 36px/36px $font-secondary;
+
+			small {
+				font-size: 20px;
+				&.cents { vertical-align: text-top; }
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	ul.cards {
+		> li {
+			float: none;
+			height: 40px;
+			margin: 0 0 10px 0;
+			padding: 5px 10px;
+			width: 100%;
+
+			.title {
+				float: left;
+				font-size: 12px;
+				line-height: 30px;
+				text-align: left;
+				width: 70%;
+			}
+			.amount {
+				float: right;
+				font-size: 24px;
+				line-height: 24px;
+				text-align: right;
+				width: 30%;
+
+				small { font-size: 14px; }
+			}
+		}
+	}
+
+}

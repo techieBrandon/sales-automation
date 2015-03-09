@@ -1,0 +1,100 @@
+<form name="account_edit_billing_contact" action="http://erc.tricension.net/api/echo" class="validate ajax-post trigger-content-flip">
+	<div class="col-group">
+		<div class="col col-1-2">
+			<div class="form-block">
+				<label for="FirstName" class="set-width">First Name:</label>
+				<input name="FirstName" type="text" class="required" value="[First Name]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="LastName" class="set-width">Last Name:</label>
+				<input name="LastName" type="text" class="required" value="[Last Name]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="Company" class="set-width">Company:</label>
+				<input name="Company" type="text" class="required" value="[Company]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="Email" class="set-width">Email:</label>
+				<input name="Email" type="text" class="required" value="[Email]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="OfficePhone" class="set-width">Phone Number:</label>
+				<input name="OfficePhone" type="text" class="required" value="[Phone #]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="MobilePhone" class="set-width">Phone Number:</label>
+				<input name="MobilePhone" type="text" value="[Phone #]" />
+			</div> <!-- form-block -->
+		</div> <!-- col -->
+
+		<div class="col col-1-2">
+			<div class="form-block">
+				<label for="Address1" class="set-width">Address:</label>
+				<input name="Address1" type="text" class="required" value="[Address]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="Address2" class="set-width">Address 2:</label>
+				<input name="Address2" type="text" value="[Address 2]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="City" class="set-width">City:</label>
+				<input name="City" type="text" class="required" value="[City]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="State" class="set-width">City:</label>
+				<div class="select-dropdown bordered float-left">
+					<div class="selected">
+						<span class="value">Kansas</span>
+						<span class="arrow"><span class="icon-carrot_down"></span></span>
+					</div> <!-- selected -->
+
+					<ul class="only-show-single">
+						<li data-value="KS" class="active">Kansas</li>
+						<li data-value="MO">Missouri</li>
+					</ul>
+					<input type="hidden" name="State" class="select-value" value="KS" />
+				</div> <!-- select-dropdown -->
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="ZipCode" class="set-width">Zip/Postal Code:</label>
+				<input name="ZipCode" type="text" class="required" value="[Zip/Postal Code]" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="Country" class="set-width">Country:</label>
+				<div class="select-dropdown bordered float-left">
+					<div class="selected">
+						<span class="value">United States</span>
+						<span class="arrow"><span class="icon-carrot_down"></span></span>
+					</div> <!-- selected -->
+
+					<ul class="only-show-single">
+						<li data-value="CA">Canada</li>
+						<li data-value="US" class="active">United States</li>
+					</ul>
+					<input type="hidden" name="Country" class="select-value" value="US" />
+				</div> <!-- select-dropdown -->
+			</div> <!-- form-block -->
+
+			<div class="form-controls">
+				<ul class="inline">
+					<li><button type="submit" class="primary green">Save</button></li>
+					<li><button type="reset" class="outline green uppercase trigger-flip">Cancel</button></li>
+				</ul>
+			</div> <!-- controls -->
+		</div> <!-- col -->
+	</div> <!-- col-group -->
+</form>
+
+<!-- Initialize validation -->
+<script src="js/app/validation.js"></script>
+<script src="js/app/select-dropdown.js"></script>

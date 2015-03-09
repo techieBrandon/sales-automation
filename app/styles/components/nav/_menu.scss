@@ -1,0 +1,14 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+nav.menu {
+	margin-top: -40px;
+
+	&.secondary {
+		background-color: tint($hyla-dark-blue, 15%);
+		margin: 0;
+	}
+}

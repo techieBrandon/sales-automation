@@ -1,0 +1,126 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.overlay-bkg {
+	background-color: #000;
+	display: none;
+	height: 100%;
+	left: 0;
+	@include opacity(.3);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.overlay {
+	background-color: #fff;
+	@include border-radius(5px);
+	display: none;
+	left: 50%;
+	margin-left: -220px;
+	margin-top: 120px;
+	@include opacity(1);
+	overflow: hidden;
+	position: absolute;
+	width: 440px;
+	z-index: 1001;
+
+	.close-overlay {
+		color: $primary-green;
+		font-size: 20px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		@include transition(all 0.3s ease);
+
+		&:hover {
+			color: tint($primary-green, 20%);
+			cursor: pointer;
+		}
+	}
+
+	header {
+		background-color: tint($hyla-gray, 90%);
+		border-bottom: 1px solid tint($hyla-gray, 85%);
+		padding: 20px 50px 20px 20px;
+		text-align: center;
+		
+		.title {
+			color: $hyla-gray;
+			display: block;
+			font: 300 22px/26px $font-secondary;
+			margin: 0 0 10px 0;
+		}
+		p {
+			color: tint($hyla-gray, 20%);
+			margin: 0;
+			text-align: left;
+		}
+	}
+
+	.body {
+		padding: 20px 20px 10px;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.overlay {
+		@include border-radius(0);
+		left: auto;
+		margin: 0;
+		width: 100%;
+
+		.close-overlay {
+			color: $dark-green;
+			left: 20px;
+			right: auto;
+			top: 20px;
+
+			&:hover {
+				color: tint($dark-green, 20%);
+				cursor: pointer;
+			}
+		}
+
+		header {
+			text-align: left;
+
+			img {
+				float: left;
+				margin: 0 15px 10px 0;
+			}
+
+			&.small-screen {
+				background-color: $primary-green;
+				text-align: center;
+
+				.title {
+					color: $dark-green;
+					font-size: 14px;
+					letter-spacing: 1px;
+					line-height: 18px;
+					margin: 0;
+					padding: 0 80px;
+					text-transform: uppercase;
+				}
+
+				button {
+					position: absolute;
+					right: 20px;
+					top: 10px;
+				}
+			}
+		}
+
+		.body {
+			img { margin: 0 auto; }
+		}
+	}
+
+}

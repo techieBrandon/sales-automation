@@ -1,0 +1,69 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+ul.notes {
+	margin: 0;
+	padding: 0;
+	> li {
+		background-color: #fff;
+		border-top: 1px solid tint($hyla-gray, 85%);
+		display: block;
+		font: 300 12px/18px $font-secondary;
+		list-style-type: none;
+		margin: 0;
+		padding: 10px; 
+		@include pie-clearfix;
+		position: relative;
+		@include transition(all 0.2s ease);
+		&:first-child { border-top: 0; }
+
+		> .content {
+			float: left;
+			position: relative;
+			width: 100%;
+
+			.date { color: tint($hyla-dark-blue, 40%); }
+
+			p {
+				color: $hyla-dark-blue;
+				font: 300 12px/18px $font-secondary;
+				margin: 5px 0 0 0;
+			}
+
+			&.has-icon {
+				padding-left: 27px;
+				.icon {
+					font-size: 16px;
+					left: 0;
+					margin-top: -20px;
+					padding: 10px 10px 0 0;
+					position: absolute;
+					top: 50%;
+				}
+			}
+		}
+
+		/** States **/
+		&:hover {
+			background-color: $bright-blue;
+			cursor: pointer;
+			> .content {
+				color: #fff;
+				.text-primary-green,.text-alert-orange { color: #fff; }
+				.date { color: #fff; }
+				p { color: #fff; }
+			}
+		}
+
+		/** Variations **/
+		&.past {
+			background-color: tint($hyla-gray, 90%);
+			border-color: tint($hyla-gray, 70%);
+
+			&:hover { background-color: $bright-blue; }
+		}
+	}
+}

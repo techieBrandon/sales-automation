@@ -1,0 +1,17 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.content-flip {
+	.trigger-flip {
+		&.active { color: tint($hyla-gray, 40%); }
+	}
+
+	.content-tails,
+	.content-heads {
+		display: none;
+		&.active { display: block; }
+	}
+}

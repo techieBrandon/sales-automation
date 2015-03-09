@@ -1,0 +1,22 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.banner {
+	@extend .gradient-light-blue;
+	overflow: hidden;
+	padding: 20px 0 0;
+	position: relative;
+
+	> .background {
+		background: image-url('earth-view.jpg') no-repeat;
+		background-position: top center;
+		@include background-size(cover);
+		height: 350px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}

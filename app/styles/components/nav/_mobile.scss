@@ -1,0 +1,87 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+nav#mobile-menu {
+	background-color: tint($hyla-dark-blue, 20%);
+	height: 100%;
+	left: -255px;
+	position: fixed;
+	top: 0;
+	@include transition(left 0.5s ease);
+	width: 255px;
+	z-index: 200;
+
+	// Open state
+	&.active { left: 0; }
+
+	&:before {
+		@include box-shadow(inset -7px 0 7px 3px rgba(0,0,0,.3));
+		content: " ";
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 15px;
+	}
+
+	header {
+		border-bottom: 1px solid tint($hyla-dark-blue, 15%);
+		margin: 0 0 20px 0;
+		padding: 20px 30px;
+
+		p {
+			color: tint($primary-blue, 70%);
+			line-height: 18px;
+			margin: 0;
+		}
+		a { color: #fff; }
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			margin: 0;
+			padding: 0;
+
+			> a {
+				color: tint($primary-blue, 70%);
+				display: block;
+				font-size: 18px;
+				line-height: 24px;
+				padding: 8px 30px 10px;
+
+				&:hover {
+					background-color: $hyla-dark-blue;
+					text-decoration: none;
+				}
+			}
+
+			&.active {
+				> a { background-color: $hyla-dark-blue; }
+			}
+
+			/** Second Tier **/
+			ul {
+				@extend .gradient-dark-blue;
+				padding: 5px 0 5px 10px;
+				> li {
+					> a {
+						font-size: 16px;
+						line-height: 21px;
+
+						&:hover {
+							background-color: transparent;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

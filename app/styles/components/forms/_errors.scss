@@ -1,0 +1,65 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+label.error {
+	color: $alert-orange;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+label.success {
+	color: $primary-green;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+/** Position **/
+.form-block {
+	label.error {
+		float: left;
+		padding: 5px 0 0 5px;
+	}
+}
+
+/*
+	INPUTS
+*/
+
+input.error {
+	border: 2px solid $alert-orange;
+}
+
+.input-box {
+
+	&.invalid {
+		border: 2px solid $alert-orange;
+	}
+	input.error { border: none; }
+
+	label.error,
+	label.status {
+		position: absolute;
+		right: -22px;
+		top: 9px;
+	}
+}
+
+/*
+	TEXTAREA
+*/
+
+textarea.error {
+	border: 2px solid $alert-orange;
+}
+
+/*
+	NO INLINE ERRORS
+*/
+
+form.no-inline-errors {
+	.alert { display: none; }
+	label.error { display: none !important; }
+}

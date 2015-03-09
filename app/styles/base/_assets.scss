@@ -1,0 +1,47 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+
+/*
+	BACKGROUND
+*/
+
+.bg-white { background-color: #fff; }
+.bg-black { background-color: #000; }
+.bg-primary-green { background-color: $primary-green; }
+.bg-primary-blue { background-color: $primary-blue; }
+.bg-bright-blue { background-color: $bright-blue; }
+.bg-medium-blue { background-color: $medium-blue; }
+.bg-dark-blue { background-color: $hyla-dark-blue; }
+.bg-medium-green { background-color: $medium-green; }
+.bg-dark-green { background-color: $dark-green; }
+.bg-acid-green { background-color: $acid-green; }
+.bg-secondary-green { background-color: $secondary-green; }
+.bg-alert-orange { background-color: $alert-orange; }
+.bg-gray { background-color: $hyla-gray; }
+.bg-gray-light { background-color: tint($hyla-gray, 80%); }
+
+
+/*
+	HORIZONTAL RULE
+*/
+
+hr {
+	/** Spacing **/
+	&.margin-large { margin: 20px 0; }
+
+	/** Colors **/
+	&.primary-blue { border-color: tint($primary-blue, 20%); }
+	&.gray-light { border-color: tint($hyla-gray, 85%); }
+}
+
+/*
+	ICONS
+*/
+
+.icon-large {
+	font-weight: 700;
+}

@@ -1,0 +1,154 @@
+
+<div id="header">
+  <div class="menu">
+    <div class="container wide">
+      <div class="primary">
+        <nav class="dropdown icons">
+          <a ui-sref="dashboard" class="current"><span class="text">Welcome,</span> [First Name] &nbsp;<span class="arrow icon-carrot_down"></span></a>
+          <ul class="only-show-single">
+            <li><a ui-sref="account"><span class="icon"><span class="icon-user"></span></span> My Account</a></li>
+            <li><a ui-sref="logout"><span class="icon"><span class="icon-logout"></span></span> Sign Out</a></li>
+          </ul>
+        </nav>
+
+        <div class="mobile-nav-trigger">
+          <span class="icon-menu_hamburger"></span>
+        </div> <!-- mobile-nav-trigger -->
+      </div> <!-- primary -->
+
+      <img class="erc-logo large-screen" src="images/erc-small.png" />
+      <a class="mobile-logo"><img src="images/hyla-logo-small.png" /></a>
+
+      <div class="utility">
+        <nav class="dropdown icons align-right">
+          <a ui-sref="dashboard" class="current">My Dashboard &nbsp;<span class="arrow icon-carrot_down"></span></a>
+          <ul class="only-show-single">
+            <li><a ui-sref="bids"><span class="icon"><span class="icon-list"></span></span> Bids</a></li>
+            <li><a ui-sref="tracking"><span class="icon"><span class="icon-marker"></span></span> Tracking</a></li>
+          </ul>
+        </nav>
+
+        <span class="divider"></span>
+
+        <div class="notifications">
+          <div class="trigger">
+            <span class="icon icon-appointment_reminders"></span> <span class="number">10</span>
+          </div> <!-- trigger -->
+          <div class="messages only-show-single">
+            <header>Notifications</header>
+            <section class="scroll-pane">
+              <ul class="notes">
+                <li data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left"><span class="text-primary-green">Lot Bid Awarded</span></div>
+                      <div class="right"><span class="date">Today 10:20 AM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were awarded the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left"><span class="text-alert-orange">SIR Bid Declined</span></div>
+                      <div class="right"><span class="date">Today 8:33 AM</span></div>
+                    </div> <!-- bar -->
+                    <p>Your bid was declined on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li data-link="#">
+                  <div class="content has-icon">
+                    <div class="icon">
+                      <span class="icon-arrow_right text-primary-green"></span>
+                    </div>
+                    <div class="bar">
+                      <div class="left">Order #0000000000</div>
+                      <div class="right"><span class="date">Today 8:20 AM</span></div>
+                    </div> <!-- bar -->
+                    <p>Your order shipped.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Awarded</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Awarded</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Declined</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Awarded</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Awarded</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+                <li class="past" data-link="#">
+                  <div class="content">
+                    <div class="bar">
+                      <div class="left">SIR Bid Declined</div>
+                      <div class="right"><span class="date">Apr 29 2:20 PM</span></div>
+                    </div> <!-- bar -->
+                    <p>You were the bid on SKU 00755623.</p>
+                  </div> <!-- content -->
+                </li>
+              </ul>
+            </section>
+            <footer>
+              <div class="content"></div>
+            </footer>
+          </div>
+        </div> <!-- notifications -->
+      </div> <!-- utility -->
+    </div> <!-- container -->
+  </div> <!-- menu -->
+
+  <hyla-banner></hyla-banner>
+
+  <nav id="mobile-menu">
+    <header>
+      <p>Welcome, <a href="#">Broderick</a> <small>email@emailaddress.com</small></p>
+    </header>
+    <ul>
+      <li class="active"><a ui-sref="account">Account</a>
+        <ul>
+          <li><a ui-sref="account">My Account</a></li>
+          <li><a ui-sref="disposition">Credits & Balance</a></li>
+          <li><a ui-sref="agreements">Agreements</a></li>
+        </ul>
+      </li>
+      <li><a ui-sref="dashboard">My Dashboard</a></li>
+      <li><a ui-sref="inventory">Inventory</a></li>
+    </ul>
+  </nav>
+</div> <!-- header -->

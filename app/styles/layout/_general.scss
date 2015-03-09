@@ -1,0 +1,115 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+* { @include box-sizing(border-box); }
+
+@mixin container {
+	@include pie-clearfix;
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+@mixin container-short { max-width: 780px; }
+@mixin container-wide { max-width: 980px; }
+
+.container {
+	@include container;
+	&.short { @include container-short; }
+	&.wide { @include container-wide; }
+}
+
+@media (max-width: 1000px) {
+
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+}
+
+/*
+	HTML
+*/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+/*
+	BODY
+*/
+
+body {
+	height: 100%;
+	left: 0;
+	overflow-x: hidden;
+	position: relative;
+	@include transition(all 0.5s ease);
+	width: 100%;
+
+	&.move-right {
+		left: 255px;
+	}
+}
+
+/*
+	PAGE
+*/
+
+#page {
+	padding: 40px 0 40px 0;
+
+	&.feature {
+		height: 100%;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	#page { padding-top: 0; }
+
+}
+
+/*
+	BAR
+*/
+
+.bar {
+	@include pie-clearfix;
+	> .left,> .right {
+		max-width: 80%;
+		&.short { width: 27%; }
+		&.wide { width: 70%; }
+	}
+	> .left { float: left; }
+	> .right { float: right; }
+	&.even {
+		> .left,> .right { width: 48%; }
+	}
+}
+
+@media (max-width: 767px) {
+
+	.bar {
+		> .small-screen-show, > .small-screen-show.wide {
+			float: none;
+			max-width: 100%;
+			width: 100%;
+		}
+		> .small-screen-hide { display: none; }
+
+		&.small-screen-stack {
+			> .left,> .right {
+				float: none;
+			}
+		}
+	}
+
+}

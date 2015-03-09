@@ -1,0 +1,40 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+form {
+	@include pie-clearfix;
+}
+
+.form-block {
+	display: block;
+	margin: 0 0 10px 0;
+	@include pie-clearfix;
+
+	> label {
+		display: block;
+		float: left;
+		padding: 0 10px 0 0;
+
+		&.set-width { width: 40%; }
+		&.set-width-short { width: 30%; }
+	}
+
+	input { float: left; }
+
+	.sub-info {
+		clear: both;
+		float: left;
+		font-size: 13px;
+		margin: 3px 0 0 40%;
+	}
+}
+
+.form-controls {
+	float: right;
+	margin: 20px 0 0 0;
+
+	button { min-width: 120px; }
+}

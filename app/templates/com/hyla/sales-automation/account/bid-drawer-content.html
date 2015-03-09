@@ -1,0 +1,57 @@
+<div class="bar">
+	<div class="left">
+		<p><small>Deadline:</small> {{getDateByDateString(bid.deadline_date)}}</p>
+	</div> <!-- left -->
+
+	<div class="right">
+		<button class="primary green tight"><span class="icon icon-document"></span> Print</button>
+	</div> <!-- right -->
+</div> <!-- bar -->
+
+<div class="title">
+	<div class="bar">
+		<div class="left"><small>[Bid Reference number]:</small></div>
+		<div class="right">{{bid.reference_number}}</div>
+	</div> <!-- bar -->
+</div> <!-- title -->
+
+<table class="details">
+	<thead>
+		<tr>
+			<th colspan="3">[Item Details]</th>
+			<th>[Bid Details]</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<small>Manufacturer: </small> {{bid.item.manufacturer}}
+				<small>Model:</small> {{bid.item.model}}
+				<small>Model #:</small> {{bid.item.model_number}}
+				<small>Grade:</small> {{bid.item.grade}}
+			</td>
+			<td>
+				<small>Technology: </small> {{bid.item.technology}}
+				<small>Carrier:</small> {{bid.item.carrier}}
+				<small>Warehouse:</small> {{bid.item.warehouse.name}}
+			</td>
+			<td class="wide">
+				<small>Packaging: </small> [Description] {{bid.shipping_information.package_description}}
+				<small>Additional Info:</small> [Description] {{bid.additional_information}}
+			</td>
+			<td>
+				<small>Awarded Quantity:</small> <strong>{{bid.awarded_quantity}}</strong>
+				<small>Price Per Unit:</small> <strong>${{bid.price_per_unit}}</strong>
+				<small class="text-bright-blue">Extended Total:</small> <strong class="text-bright-blue">${{bid.awarded_quantity * bid.price_per_unit}}</strong>
+
+				<nav class="dropdown align-right green shadow">
+					<a href="#" class="current">Take Action &nbsp;<span class="sprites-arrow-dropdown iir"></span></a>
+					<ul class="only-show-single">
+						<li><a href="#" ng-click="cancelBid($index)">Cancel Bid</a></li>
+						<li><a href="#" ng-click="changeBid($index)">Change Bid</a></li>
+					</ul>
+				</nav>
+			</td>
+		</tr>
+	</tbody>
+</table>

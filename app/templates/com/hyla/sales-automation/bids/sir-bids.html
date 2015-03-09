@@ -1,0 +1,47 @@
+<p>Awarding bids will be complete on: <span class="text-dark-blue">Feb. 4, 11:00am</span></p>
+<div class="bar">
+  <div class="left">
+    <div class="select-dropdown">
+      <div class="selected">
+        <span class="value">Sort</span>
+        <span class="arrow"><span class="icon-carrot_down"></span></span>
+      </div> <!-- selected -->
+
+      <ul class="only-show-single">
+        <li bid-filter bid-filter-name="all"></li>
+        <li bid-filter bid-filter-name="renew"></li>
+        <li bid-filter bid-filter-name="refresh"></li>
+        <li bid-filter bid-filter-name="ftp"></li>
+        <li bid-filter bid-filter-name="ptg"></li>
+        <li bid-filter bid-filter-name="ptc"></li>
+        <li bid-filter bid-filter-name="rec"></li>
+      </ul>
+      <input type="hidden" name="sort" class="select-value" value="" />
+    </div> <!-- select-dropdown -->
+  </div> <!-- left -->
+
+  <div class="right">
+    <div class="pagination">
+      <span class="results"><strong>{{bidIndex + 1}}-{{bidIndex + bidCount}}</strong> of <strong>{{bidTotal}}</strong></span>
+      <span class="control previous" ng-click="selectPreviousBidsPage()"><span class="icon-carrot_left"></span></span>
+      <span class="control next" ng-click="selectNextBidsPage()"><span class="icon-carrot_right"></span></span>
+    </div> <!-- pagination -->
+  </div> <!-- right -->
+</div> <!-- bar -->
+
+<table class="sorting" ng-controller="BidSortController">
+  <tbody>
+    <tr>
+      <td bid-sort bid-sort-name="grade" ng-class="getActiveSortClassByName('grade')"></td>
+      <td bid-sort bid-sort-name="product" ng-class="getActiveSortClassByName('product')"></td>
+      <td bid-sort bid-sort-name="carrier" ng-class="getActiveSortClassByName('carrier')"></td>
+      <td bid-sort bid-sort-name="warehouse" ng-class="getActiveSortClassByName('warehouse')"></td>
+      <td bid-sort bid-sort-name="last updated" ng-class="getActiveSortClassByName('last updated')"></td>
+      <td><span>&nbsp;</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="drawers" ng-controller="BidDrawerController">
+  <div bid-drawers bid-drawers-template="templates/com/hyla/sales-automation/bids/sir-bids-drawers.html" class="bid-list-items"></div>
+</div> <!-- drawers -->

@@ -1,0 +1,128 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+.notifications {
+	> .trigger {
+		padding-right: 20px;
+		position: relative;
+
+		> .icon {
+			color: #fff;
+			font-size: 20px;
+		}
+
+		> .number {
+			background-color: $bright-blue;
+			@include border-radius(2px);
+			color: #fff;
+			display: block;
+			float: left;
+			font: 300 12px/21px $font-secondary;
+			padding: 1px 6px 0;
+			position: absolute;
+			right: 1px;
+			text-align: center;
+			top: -12px;
+			@include transition(background-color 0.3s ease);
+		}
+
+		/** States **/
+		&:hover {
+			cursor: pointer;
+			> .number { background-color: tint($bright-blue, 20%); }
+		}
+	}
+	.messages {
+		background-color: #fff;
+		@include border-radius(2px);
+		@include box-shadow(0 0 1px 2px rgba(0,0,0,.05));
+		display: none;
+		height: 395px;
+		position: absolute;
+		right: -11px;
+		top: 33px;
+		width: 350px;
+		z-index: 100;
+
+		&:before {
+			border-bottom: 8px solid #fff;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			content: " ";
+			display: block;
+			height: 0;
+			position: absolute;
+			right: 32px;
+			top: -8px;
+			width: 0;
+			z-index: 100;
+		}
+
+		header {
+			border-bottom: 1px solid tint($hyla-gray, 85%);
+			color: $hyla-gray;
+			font: 300 16px/20px $font-secondary;
+			padding: 10px 10px 7px;
+		}
+		section {
+			height: 333px;
+			outline: none;
+			overflow: hidden;
+			ul.notes {
+				.bar {
+					.right { padding-right: 20px; }
+				}
+			}
+		}
+		footer {
+			position: relative;
+
+			.content {
+				background-color: #fff;
+				height: 25px;
+				position: relative;
+				z-index: 11;
+			}
+			&:after {
+				border-radius: 25% / 50%;
+				@include box-shadow(2px 0 15px 0 rgba(0,0,0,.25));
+				content: " ";
+				height: 20px;
+				left: 5%;
+				position: absolute;
+				top: 0;
+				width: 90%;
+				z-index: 10;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1000px) {
+
+	.notifications {
+		.messages {
+			right: -5px;
+			&:before { right: 36px;	}
+		}
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.notifications {
+		.messages {
+			max-width: 350px;
+			right: 0;
+			top: 45px;
+			width: 100%;
+			&:before { right: 31px;	}
+		}
+	}
+
+}

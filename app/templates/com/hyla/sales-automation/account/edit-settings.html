@@ -1,0 +1,84 @@
+<form name="account_edit_settings" action="http://erc.tricension.net/api/echo" class="validate ajax-post trigger-content-flip">
+	<div class="col-group">
+		<div class="col col-1-2">
+			<ul class="plain">
+				<li>Account Email: <span>email@emailaddress.com</span></li>
+			</ul>
+
+			<div class="form-block">
+				<label for="password" class="set-width">Current Password:</label>
+				<input name="password" type="password" />
+				<div class="sub-info"><a href="#overlay-forgot-password" class="overlay-trigger">Forgot your password?</a></div>
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="new_password" class="set-width">New Password:</label>
+				<input name="new_password" type="password" />
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="confirm_password" class="set-width">Confirm Password:</label>
+				<input name="confirm_password" type="password" />
+			</div> <!-- form-block -->
+			<p class="small">6 character minimum including one number.</p>
+		</div> <!-- col -->
+
+		<div class="col col-1-2">
+			<ul class="plain">
+				<li><a href="#"><span class="icon-help"></span> Why can't I edit these?</a></li>
+				<li>Customer Account Number: <span>100023</span></li>
+				<li>Warehouse: <span>0006, 0023, 0003</span></li>
+				<li>Currency: <span>USD</span></li>
+				<li>Billed in Currency: <span>USD</span></li>
+			</ul>
+
+			<div class="form-block">
+				<label for="time_zone" class="set-width-short">Time Zone:</label>
+				<div class="select-dropdown bordered float-left">
+					<div class="selected">
+						<span class="value">GMT-06:00 MTN</span>
+						<span class="arrow"><span class="icon-carrot_down"></span></span>
+					</div> <!-- selected -->
+
+					<ul class="only-show-single">
+						<li data-value="GMT-06:00 MTN">GMT-06:00 MTN</li>
+						<li data-value="Option 2">Option #2</li>
+						<li data-value="Option 3">Option #3</li>
+						<li data-value="Option 4">Option #4 Long Text Long Text Long Text</li>
+					</ul>
+					<input type="hidden" name="sort" class="select-value" value="GMT-06:00 MTN" />
+				</div> <!-- select-dropdown -->
+			</div> <!-- form-block -->
+
+			<div class="form-block">
+				<label for="time_zone" class="set-width-short">Language:</label>
+				<div class="select-dropdown bordered float-left">
+					<div class="selected">
+						<span class="value">English</span>
+						<span class="arrow"><span class="icon-carrot_down"></span></span>
+					</div> <!-- selected -->
+
+					<ul class="only-show-single">
+						<li data-value="GMT-06:00 MTN">English</li>
+						<li data-value="Option 2">Option #2</li>
+						<li data-value="Option 3">Option #3</li>
+						<li data-value="Option 4">Option #4 Long Text Long Text Long Text</li>
+					</ul>
+					<input type="hidden" name="sort" class="select-value" value="English" />
+				</div> <!-- select-dropdown -->
+			</div> <!-- form-block -->
+
+			<div class="form-controls">
+				<ul class="inline">
+					<li><button type="submit" class="primary green">Save</button></li>
+					<li><button type="reset" class="outline green uppercase trigger-flip">Cancel</button></li>
+				</ul>
+			</div> <!-- controls -->
+		</div> <!-- col -->
+	</div> <!-- col-group -->
+</form>
+
+<!-- Initialize JS -->
+<script src="js/app/validation.js"></script>
+<script src="js/app/select-dropdown.js"></script>
+<script src="js/app/overlay.js"></script>

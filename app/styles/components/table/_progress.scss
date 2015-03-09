@@ -1,0 +1,50 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+table.progress {
+	margin: 0 0 20px 0;
+	width: 100%;
+
+	> thead {
+		> tr {
+			> th {
+				color: $hyla-dark-blue;
+				font: 300 11px/14px $font-secondary;
+				padding: 10px 15px 5px 15px;
+				text-align: left;
+				text-transform: uppercase;
+				word-wrap: break-word;
+
+				&.center { text-align: center; }
+			}
+		}
+	}
+
+	> tbody {
+		border: 1px solid tint($hyla-gray, 80%);
+		> tr {
+			@include transition(all 0.3s ease);
+
+			> td {
+				border-bottom: 1px solid tint($hyla-gray, 80%);
+				color: $hyla-gray;
+				font: 100 14px/18px $font-secondary;
+				margin: 0;
+				padding: 10px 15px;
+				vertical-align: top;
+				word-wrap: break-word;
+
+				&:first-child {
+					background-color: tint($hyla-gray, 95%);
+					color: $hyla-dark-blue;
+					font-weight: 700;
+				}
+				&.center { text-align: center; }
+			}
+			&:hover,&.complete { background-color: tint($hyla-gray, 90%); }
+		}
+	}
+}

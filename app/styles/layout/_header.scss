@@ -1,0 +1,159 @@
+/*
+ * Created by: Level Five Solutions
+ * Website: http://www.levelfivesolutions.com/
+ *
+ */
+
+#header {
+
+	.menu {
+		background-color: $primary-blue;
+		padding: 20px 20px 10px;
+
+		.primary { 
+			float: left;
+			.mobile-nav-trigger { display: none; }
+		}
+		.erc-logo {
+			left: 50%;
+			margin-left: -140px;
+			position: absolute;
+			top: -14px;
+		}
+		.utility {
+			float: right;
+			padding-top: 2px;
+
+			nav.dropdown { float: left; }
+			.divider {
+				background-color: tint($primary-blue, 40%);
+				display: block;
+				float: left;
+				height: 36px;
+				margin: -10px 10px 0;
+				width: 1px;
+			}
+			.notifications { float: left; }
+		}
+		.mobile-logo { display: none; }
+	}
+
+	.banner {
+		@extend .gradient-blue;
+		height: 175px;
+		overflow: hidden;
+		padding: 10px 0;
+
+		.logo {
+			float: left;
+			a { display: block; }
+		}
+		.title {
+			color: #fff;
+			clear: both;
+			font: 100 36px/36px $font-tertiary;
+			padding: 40px 0 0 20px;
+			text-transform: uppercase;
+
+			small {
+				font: 100 18px/36px $font-primary;
+				text-transform: none;
+			}
+		}
+
+		.seal {
+			background: image-url('hyla-seal.png') no-repeat;
+			display: block;
+			height: image-height('seal-trade-restore-connect.png');
+			position: absolute;
+			right: 60px;
+			top: -40px;
+			width: image-width('seal-trade-restore-connect.png');
+		}
+	}
+}
+
+
+@media (max-width: 1000px) {
+
+	#header {
+		.menu {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+}
+
+
+@media (max-width: 767px) {
+
+	#header {
+
+		.menu {
+			padding: 10px 0 5px;
+
+			.primary {
+				nav.dropdown { display: none; }
+				.mobile-nav-trigger {
+					background-color: $primary-green;
+					@include border-radius(3px);
+					color: #fff;
+					display: block;
+					font-size: 24px;
+					line-height: 24px;
+					padding: 3px 10px;
+					text-align: center;
+					&:hover {
+						background-color: tint($primary-green, 30%);
+						cursor: pointer;
+						@include transition(all 0.2s ease);
+					}
+				}
+			}
+			.mobile-logo {
+				display: block;
+				left: 50%;
+				margin-left: -43px;
+				position: absolute;
+				top: 0;
+
+				img {
+					height: 34px !important;
+					width: 85px !important;
+				}
+			}
+			.utility {
+				padding-top: 10px;
+
+				nav.dropdown { display: none; }
+				.divider { display: none; }
+			}
+		}
+
+		.banner {
+			height: 60px;
+			.logo { display: none; }
+			.title {
+				font-size: 32px;
+				line-height: 32px;
+				padding-top: 6px;
+
+				small {
+					font-size: 14px;
+					line-height: 32px;
+				}
+			}
+
+			.seal {
+				background-size: 100px 100px;
+				height: image-height('seal-trade-restore-connect.png');
+				right: 0;
+				top: -20px;
+				width: image-width('seal-trade-restore-connect.png');
+			}
+		}
+
+	}
+
+}
